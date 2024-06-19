@@ -25,7 +25,7 @@ resource "aws_s3_bucket_acl" "example" {
   bucket = aws_s3_bucket.mybucket.id
   acl = "public-read"
 }
-
+    
 resource "null_resource" "example" {
   depends_on = [ aws_s3_bucket_acl.example ]
 
